@@ -1,0 +1,12 @@
+{
+    "@odata.context": "https://wabi-north-europe-redirect.analysis.windows.net/v1.0/myorg/groups/ceb0d1d0-6226-4aef-b245-fac7f89bb52e/$metadata#users",
+    "value": [
+        {
+            "emailAddress": "duarte.belo@closer.pt",
+            "groupUserAccessRight": "Admin",
+            "displayName": "Duarte Belo",
+            "identifier": "duarte.belo@closer.pt",
+            "principalType": "User"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "@odata.context": "https://wabi-north-europe-redirect.analysis.windows.net/v1.0/myorg/groups/ceb0d1d0-6226-4aef-b245-fac7f89bb52e/$metadata#tiles",
+    "value": [
+        {
+            "id": "9f37773c-c8eb-43a4-92ed-568774088a55",
+            "title": "CLOSER_BIACADEMY.pbix",
+            "embedUrl": "https://app.powerbi.com/embed?dashboardId=fcde5460-269f-4c85-9193-2d2764433dd4&tileId=9f37773c-c8eb-43a4-92ed-568774088a55&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnt9fQ%3d%3d",
+            "rowSpan": 0,
+            "colSpan": 0,
+            "reportId": "025bdeaf-cf4e-40b9-a4c6-01446cbdff3f",
+            "datasetId": "7a924e7a-7ab5-4cfb-8e43-df82647bfc20"
+        }
+    ]
+}

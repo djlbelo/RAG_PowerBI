@@ -1,0 +1,47 @@
+{
+    "@odata.context": "https://wabi-north-europe-redirect.analysis.windows.net/v1.0/myorg/groups/ceb0d1d0-6226-4aef-b245-fac7f89bb52e/$metadata#datasets",
+    "value": [
+        {
+            "id": "4314c162-cd96-46f5-be4c-4e2ed9354b56",
+            "name": "US Sales Analysis",
+            "webUrl": "https://app.powerbi.com/groups/ceb0d1d0-6226-4aef-b245-fac7f89bb52e/datasets/4314c162-cd96-46f5-be4c-4e2ed9354b56",
+            "addRowsAPIEnabled": false,
+            "configuredBy": "duarte.belo@closer.pt",
+            "isRefreshable": true,
+            "isEffectiveIdentityRequired": false,
+            "isEffectiveIdentityRolesRequired": false,
+            "isOnPremGatewayRequired": true,
+            "targetStorageMode": "Abf",
+            "createdDate": "2024-12-08T15:42:43.363Z",
+            "createReportEmbedURL": "https://app.powerbi.com/reportEmbed?config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsidXNhZ2VNZXRyaWNzVk5leHQiOnRydWV9fQ%3d%3d",
+            "qnaEmbedURL": "https://app.powerbi.com/qnaEmbed?config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsidXNhZ2VNZXRyaWNzVk5leHQiOnRydWV9fQ%3d%3d",
+            "upstreamDatasets": [],
+            "users": [],
+            "queryScaleOutSettings": {
+                "autoSyncReadOnlyReplicas": true,
+                "maxReadOnlyReplicas": 0
+            }
+        },
+        {
+            "id": "7a924e7a-7ab5-4cfb-8e43-df82647bfc20",
+            "name": "CLOSER_BIACADEMY",
+            "webUrl": "https://app.powerbi.com/groups/ceb0d1d0-6226-4aef-b245-fac7f89bb52e/datasets/7a924e7a-7ab5-4cfb-8e43-df82647bfc20",
+            "addRowsAPIEnabled": false,
+            "configuredBy": "duarte.belo@closer.pt",
+            "isRefreshable": true,
+            "isEffectiveIdentityRequired": false,
+            "isEffectiveIdentityRolesRequired": false,
+            "isOnPremGatewayRequired": true,
+            "targetStorageMode": "Abf",
+            "createdDate": "2024-12-08T22:37:34.6Z",
+            "createReportEmbedURL": "https://app.powerbi.com/reportEmbed?config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsidXNhZ2VNZXRyaWNzVk5leHQiOnRydWV9fQ%3d%3d",
+            "qnaEmbedURL": "https://app.powerbi.com/qnaEmbed?config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsidXNhZ2VNZXRyaWNzVk5leHQiOnRydWV9fQ%3d%3d",
+            "upstreamDatasets": [],
+            "users": [],
+            "queryScaleOutSettings": {
+                "autoSyncReadOnlyReplicas": true,
+                "maxReadOnlyReplicas": 0
+            }
+        }
+    ]
+}

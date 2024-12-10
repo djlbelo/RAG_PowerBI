@@ -1,0 +1,20 @@
+{
+    "total_datasets": [
+        "US Sales Analysis",
+        "CLOSER_BIACADEMY"
+    ],
+    "total_reports": {
+        "US Sales Analysis": "dc20da54-0dde-4b7e-aa9c-4435bb7c71be",
+        "CLOSER_BIACADEMY": "025bdeaf-cf4e-40b9-a4c6-01446cbdff3f"
+    },
+    "total_dashboards": [
+        "CLOSER_BIACADEMY.pbix"
+    ],
+    "total_groups": [],
+    "total_users": [
+        "Duarte Belo"
+    ],
+    "total_tiles": {
+        "CLOSER_BIACADEMY.pbix": null
+    }
+}
