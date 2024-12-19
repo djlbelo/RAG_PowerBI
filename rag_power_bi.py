@@ -6,40 +6,33 @@ from credentials import username, password
 
 # Constants
 TENANT_ID = '057866cb-0e0f-4818-bd4a-0255845df359'
-CLIENT_ID = '7fc05981-ef3e-4198-beed-6559a6a4c443'
+CLIENT_ID = '04bb970d-3099-4845-b81d-92e23362f261'
 CLIENT_SECRET = 'Tld8Q~hX_c4u8oYJfrdVd3KeZDvVVcpesAFywdce'
-AUTHORITY_URL = f'https://login.microsoftonline.com/{TENANT_ID}'
-SCOPE = ['https://analysis.windows.net/powerbi/api/.default']
+AUTHORITY_URL = f'https://login.microsoftonline.com/organizations'
+SCOPE = ["https://api.fabric.microsoft.com/Workspace.ReadWrite.All","https://api.fabric.microsoft.com/Item.ReadWrite.All"]
+
 GROUP_ID = 'ceb0d1d0-6226-4aef-b245-fac7f89bb52e'
 POWER_BI_API_URL = f'https://api.powerbi.com/v1.0/myorg/groups/{GROUP_ID}/'
+REDIRECT_URI = 'http://localhost'
 
 # Variables
 access_token = ''
 
 # Authenticate and get access token
 if not access_token:
-    app = msal.ConfidentialClientApplication(
+    app = msal.PublicClientApplication(
         CLIENT_ID,
-        authority=AUTHORITY_URL,
-        client_credential=CLIENT_SECRET
+        authority=AUTHORITY_URL
     )
-    result = app.acquire_token_for_client(scopes=SCOPE)
+    result = app.acquire_token_interactive(scopes=SCOPE)
+    print(result)
     if 'access_token' in result:
         access_token = result['access_token']
     else:
-        print('Could not obtain access token, trying acquiring token by username and password')
-        result = app.acquire_token_by_username_password(
-            username,
-            password,
-            scopes=SCOPE
-        )
-        if 'access_token' in result:
-            access_token = result['access_token']
-        else:
-            raise Exception('Could not obtain access token both ways')
+        print(f'Error obtaining access token: {result}')
 
 # Hardcoded access token https://learn.microsoft.com/en-us/rest/api/power-bi/reports/get-reports-in-group#code-try-0
-access_token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Inp4ZWcyV09OcFRrd041R21lWWN1VGR0QzZKMCIsImtpZCI6Inp4ZWcyV09OcFRrd041R21lWWN1VGR0QzZKMCJ9.eyJhdWQiOiJodHRwczovL2FuYWx5c2lzLndpbmRvd3MubmV0L3Bvd2VyYmkvYXBpIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMDU3ODY2Y2ItMGUwZi00ODE4LWJkNGEtMDI1NTg0NWRmMzU5LyIsImlhdCI6MTczMzgyNjUyOSwibmJmIjoxNzMzODI2NTI5LCJleHAiOjE3MzM4MzIwOTAsImFjY3QiOjAsImFjciI6IjEiLCJhaW8iOiJBVlFBcS84WUFBQUErOGVEeEV5MTBpMHcxaFBDa3ZzWDNIenRISFdCcE1TdHc2L29FeGZibWFLMTFOTWcyWnRjTlFxZHJmUTYxdVBzeWNrMThWVDVzWFIzZExBRFlpT0NaLzZtOTJkZjM5LzZ0T1FmL0t6ZGFiZz0iLCJhbXIiOlsicHdkIiwibWZhIl0sImFwcGlkIjoiMThmYmNhMTYtMjIyNC00NWY2LTg1YjAtZjdiZjJiMzliM2YzIiwiYXBwaWRhY3IiOiIwIiwiZmFtaWx5X25hbWUiOiJCZWxvIiwiZ2l2ZW5fbmFtZSI6IkR1YXJ0ZSIsImlkdHlwIjoidXNlciIsImlwYWRkciI6IjE5NS4yMy43Mi4xNSIsIm5hbWUiOiJEdWFydGUgQmVsbyIsIm9pZCI6IjUwMGI3NTU4LTA2OTgtNDFkMi1hMDBmLTI3ZjdlMmZiOTFhOCIsInB1aWQiOiIxMDAzMjAwM0M4MzIyRkQ3IiwicmgiOiIxLkFWNEF5Mlo0QlE4T0dFaTlTZ0pWaEYzeldRa0FBQUFBQUFBQXdBQUFBQUFBQUFBUkFibGVBQS4iLCJzY3AiOiJBcHAuUmVhZC5BbGwgQ2FwYWNpdHkuUmVhZC5BbGwgQ2FwYWNpdHkuUmVhZFdyaXRlLkFsbCBDb25uZWN0aW9uLlJlYWQuQWxsIENvbm5lY3Rpb24uUmVhZFdyaXRlLkFsbCBDb250ZW50LkNyZWF0ZSBEYXNoYm9hcmQuUmVhZC5BbGwgRGFzaGJvYXJkLlJlYWRXcml0ZS5BbGwgRGF0YWZsb3cuUmVhZC5BbGwgRGF0YWZsb3cuUmVhZFdyaXRlLkFsbCBEYXRhc2V0LlJlYWQuQWxsIERhdGFzZXQuUmVhZFdyaXRlLkFsbCBHYXRld2F5LlJlYWQuQWxsIEdhdGV3YXkuUmVhZFdyaXRlLkFsbCBJdGVtLkV4ZWN1dGUuQWxsIEl0ZW0uRXh0ZXJuYWxEYXRhU2hhcmUuQWxsIEl0ZW0uUmVhZFdyaXRlLkFsbCBJdGVtLlJlc2hhcmUuQWxsIE9uZUxha2UuUmVhZC5BbGwgT25lTGFrZS5SZWFkV3JpdGUuQWxsIFBpcGVsaW5lLkRlcGxveSBQaXBlbGluZS5SZWFkLkFsbCBQaXBlbGluZS5SZWFkV3JpdGUuQWxsIFJlcG9ydC5SZWFkV3JpdGUuQWxsIFJlcHJ0LlJlYWQuQWxsIFN0b3JhZ2VBY2NvdW50LlJlYWQuQWxsIFN0b3JhZ2VBY2NvdW50LlJlYWRXcml0ZS5BbGwgVGVuYW50LlJlYWQuQWxsIFRlbmFudC5SZWFkV3JpdGUuQWxsIFVzZXJTdGF0ZS5SZWFkV3JpdGUuQWxsIFdvcmtzcGFjZS5HaXRDb21taXQuQWxsIFdvcmtzcGFjZS5HaXRVcGRhdGUuQWxsIFdvcmtzcGFjZS5SZWFkLkFsbCBXb3Jrc3BhY2UuUmVhZFdyaXRlLkFsbCIsInN1YiI6IklTRlJnUmJ6aUpfZDdhM2VnX2hiMFNtSVh5NzIwY0tWYl9CRjAxWHlIRkkiLCJ0aWQiOiIwNTc4NjZjYi0wZTBmLTQ4MTgtYmQ0YS0wMjU1ODQ1ZGYzNTkiLCJ1bmlxdWVfbmFtZSI6ImR1YXJ0ZS5iZWxvQGNsb3Nlci5wdCIsInVwbiI6ImR1YXJ0ZS5iZWxvQGNsb3Nlci5wdCIsInV0aSI6IkZiZjFINWl5STA2eVpoaWFnWVYzQUEiLCJ2ZXIiOiIxLjAiLCJ3aWRzIjpbImI3OWZiZjRkLTNlZjktNDY4OS04MTQzLTc2YjE5NGU4NTUwOSJdLCJ4bXNfaWRyZWwiOiIxIDIyIn0.kwMNLJeLYoyeNL_nwou37d1CiVjmIlWeHQUp7SGTMbBMuU-rm7Wh3hwrkyvQ2-wabawK6STeOubJ5G6j2LeVJtz8aY5aaaKMF7863AnMzLjaFUDLl6qhIIW42UDDtcu_58Lov56FPU9khoTbwMMcDH-d51bxd-ZoTfVK99mf2LBwKsAZocaeI7q5CtEQXvZZ0xOFaS3nBOA_jbGp1dUNLY8yb0wJ0cUXwwS73B5CpwbFKg03uUoEUUUtSpCjT6F8m0b-C3t7AF7AIjk6e_NNHQuLC5AgAOt78-8rTGbWAdh7WNPtEbh1fWegjrOd0OZvD4Vy5FBXbt5lktgwO6-w8w'
+#access_token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Inp4ZWcyV09OcFRrd041R21lWWN1VGR0QzZKMCIsImtpZCI6Inp4ZWcyV09OcFRrd041R21lWWN1VGR0QzZKMCJ9.eyJhdWQiOiJodHRwczovL2FuYWx5c2lzLndpbmRvd3MubmV0L3Bvd2VyYmkvYXBpIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMDU3ODY2Y2ItMGUwZi00ODE4LWJkNGEtMDI1NTg0NWRmMzU5LyIsImlhdCI6MTczMzgyNjUyOSwibmJmIjoxNzMzODI2NTI5LCJleHAiOjE3MzM4MzIwOTAsImFjY3QiOjAsImFjciI6IjEiLCJhaW8iOiJBVlFBcS84WUFBQUErOGVEeEV5MTBpMHcxaFBDa3ZzWDNIenRISFdCcE1TdHc2L29FeGZibWFLMTFOTWcyWnRjTlFxZHJmUTYxdVBzeWNrMThWVDVzWFIzZExBRFlpT0NaLzZtOTJkZjM5LzZ0T1FmL0t6ZGFiZz0iLCJhbXIiOlsicHdkIiwibWZhIl0sImFwcGlkIjoiMThmYmNhMTYtMjIyNC00NWY2LTg1YjAtZjdiZjJiMzliM2YzIiwiYXBwaWRhY3IiOiIwIiwiZmFtaWx5X25hbWUiOiJCZWxvIiwiZ2l2ZW5fbmFtZSI6IkR1YXJ0ZSIsImlkdHlwIjoidXNlciIsImlwYWRkciI6IjE5NS4yMy43Mi4xNSIsIm5hbWUiOiJEdWFydGUgQmVsbyIsIm9pZCI6IjUwMGI3NTU4LTA2OTgtNDFkMi1hMDBmLTI3ZjdlMmZiOTFhOCIsInB1aWQiOiIxMDAzMjAwM0M4MzIyRkQ3IiwicmgiOiIxLkFWNEF5Mlo0QlE4T0dFaTlTZ0pWaEYzeldRa0FBQUFBQUFBQXdBQUFBQUFBQUFBUkFibGVBQS4iLCJzY3AiOiJBcHAuUmVhZC5BbGwgQ2FwYWNpdHkuUmVhZC5BbGwgQ2FwYWNpdHkuUmVhZFdyaXRlLkFsbCBDb25uZWN0aW9uLlJlYWQuQWxsIENvbm5lY3Rpb24uUmVhZFdyaXRlLkFsbCBDb250ZW50LkNyZWF0ZSBEYXNoYm9hcmQuUmVhZC5BbGwgRGFzaGJvYXJkLlJlYWRXcml0ZS5BbGwgRGF0YWZsb3cuUmVhZC5BbGwgRGF0YWZsb3cuUmVhZFdyaXRlLkFsbCBEYXRhc2V0LlJlYWQuQWxsIERhdGFzZXQuUmVhZFdyaXRlLkFsbCBHYXRld2F5LlJlYWQuQWxsIEdhdGV3YXkuUmVhZFdyaXRlLkFsbCBJdGVtLkV4ZWN1dGUuQWxsIEl0ZW0uRXh0ZXJuYWxEYXRhU2hhcmUuQWxsIEl0ZW0uUmVhZFdyaXRlLkFsbCBJdGVtLlJlc2hhcmUuQWxsIE9uZUxha2UuUmVhZC5BbGwgT25lTGFrZS5SZWFkV3JpdGUuQWxsIFBpcGVsaW5lLkRlcGxveSBQaXBlbGluZS5SZWFkLkFsbCBQaXBlbGluZS5SZWFkV3JpdGUuQWxsIFJlcG9ydC5SZWFkV3JpdGUuQWxsIFJlcHJ0LlJlYWQuQWxsIFN0b3JhZ2VBY2NvdW50LlJlYWQuQWxsIFN0b3JhZ2VBY2NvdW50LlJlYWRXcml0ZS5BbGwgVGVuYW50LlJlYWQuQWxsIFRlbmFudC5SZWFkV3JpdGUuQWxsIFVzZXJTdGF0ZS5SZWFkV3JpdGUuQWxsIFdvcmtzcGFjZS5HaXRDb21taXQuQWxsIFdvcmtzcGFjZS5HaXRVcGRhdGUuQWxsIFdvcmtzcGFjZS5SZWFkLkFsbCBXb3Jrc3BhY2UuUmVhZFdyaXRlLkFsbCIsInN1YiI6IklTRlJnUmJ6aUpfZDdhM2VnX2hiMFNtSVh5NzIwY0tWYl9CRjAxWHlIRkkiLCJ0aWQiOiIwNTc4NjZjYi0wZTBmLTQ4MTgtYmQ0YS0wMjU1ODQ1ZGYzNTkiLCJ1bmlxdWVfbmFtZSI6ImR1YXJ0ZS5iZWxvQGNsb3Nlci5wdCIsInVwbiI6ImR1YXJ0ZS5iZWxvQGNsb3Nlci5wdCIsInV0aSI6IkZiZjFINWl5STA2eVpoaWFnWVYzQUEiLCJ2ZXIiOiIxLjAiLCJ3aWRzIjpbImI3OWZiZjRkLTNlZjktNDY4OS04MTQzLTc2YjE5NGU4NTUwOSJdLCJ4bXNfaWRyZWwiOiIxIDIyIn0.kwMNLJeLYoyeNL_nwou37d1CiVjmIlWeHQUp7SGTMbBMuU-rm7Wh3hwrkyvQ2-wabawK6STeOubJ5G6j2LeVJtz8aY5aaaKMF7863AnMzLjaFUDLl6qhIIW42UDDtcu_58Lov56FPU9khoTbwMMcDH-d51bxd-ZoTfVK99mf2LBwKsAZocaeI7q5CtEQXvZZ0xOFaS3nBOA_jbGp1dUNLY8yb0wJ0cUXwwS73B5CpwbFKg03uUoEUUUtSpCjT6F8m0b-C3t7AF7AIjk6e_NNHQuLC5AgAOt78-8rTGbWAdh7WNPtEbh1fWegjrOd0OZvD4Vy5FBXbt5lktgwO6-w8w'
 headers = {'Authorization': f'Bearer {access_token}'}
 
 # Retrieve datasets
@@ -61,8 +54,6 @@ def get_reports():
             f.write(json.dumps(response.json(), indent=4))
         return response.json()
     print(f'Error retrieving reports: {response}')
-
-
 
 # Retrieve dashboards
 def get_dashboards():
@@ -106,19 +97,24 @@ def get_users():
     else:
         print(f'Error retrieving users: {response}')
 
-
-# Summarize information
+# Retrieve dataflow sources# Summarize information
 def summarize_info():
     datasets = get_datasets()
     reports = get_reports()
     dashboards = get_dashboards()
     groups = get_groups()
     users = get_users()
+    dataflows = get_dataflows()
 
-    #dictionary of tiles for each dashboard
+    # dictionary of tiles for each dashboard
     tiles = {}
     for dashboard in dashboards['value']:
         tiles[dashboard['displayName']] = get_tiles(dashboard)
+
+    # dictionary of dataflow sources for each dataflow
+    dataflow_sources = {}
+    for dataflow in dataflows['value']:
+        dataflow_sources[dataflow['name']] = get_dataflow_sources(dataflow)
 
     summary = {
         'total_datasets': [dataset['name'] for dataset in datasets['value']] if datasets and 'value' in datasets else [],
@@ -126,9 +122,29 @@ def summarize_info():
         'total_dashboards': [dashboard['displayName'] for dashboard in dashboards['value']] if dashboards and 'value' in dashboards else [],
         'total_groups': [group['name'] for group in groups['value']] if groups and 'value' in groups else [],
         'total_users': [user['displayName'] for user in users['value']] if users and 'value' in users else [],
-        'total_tiles': tiles
+        'total_tiles': tiles,
+        'total_dataflows': [dataflow['name'] for dataflow in dataflows['value']] if dataflows and 'value' in dataflows else [],
+        'total_dataflow_sources': dataflow_sources
     }
     return summary
+
+def get_dataflow_sources(dataflow):
+    dataflow_name = dataflow['name']
+    dataflow_id = dataflow['objectId']
+    response = requests.get(f'{POWER_BI_API_URL}dataflows/{dataflow_id}/datasources', headers=headers)
+    if response.status_code == 200:
+        with open(f'responses/dataflow_sources/dataflow_sources_{dataflow_name}.json', 'w') as f:
+            f.write(json.dumps(response.json(), indent=4))
+    else:
+        print(f'Error retrieving dataflow sources: {response}')# Retrieve dataflows
+
+def get_dataflows():
+    response = requests.get(f'{POWER_BI_API_URL}dataflows', headers=headers)
+    if response.status_code == 200:
+        with open('responses/dataflows.json', 'w') as f:
+            f.write(json.dumps(response.json(), indent=4))
+        return response.json()
+    print(f'Error retrieving dataflows: {response}')
 
 # Main function
 def main():
@@ -150,6 +166,7 @@ def main():
             else:
                 print(f'Error retrieving report {report_id}: {response}')
         print(f'Summary: {summary}')
+        print(access_token)
 
 
 

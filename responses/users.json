@@ -7,6 +7,13 @@
             "displayName": "Duarte Belo",
             "identifier": "duarte.belo@closer.pt",
             "principalType": "User"
+        },
+        {
+            "emailAddress": "rodrigo.anselmo@closer.pt",
+            "groupUserAccessRight": "Admin",
+            "displayName": "Rodrigo Anselmo",
+            "identifier": "rodrigo.anselmo@closer.pt",
+            "principalType": "User"
         }
     ]
 }
