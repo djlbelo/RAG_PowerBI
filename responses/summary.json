@@ -1,6 +1,5 @@
 {
     "total_datasets": [
-        "US Sales Analysis",
         "CLOSER_BIACADEMY"
     ],
     "total_reports": {
@@ -10,11 +9,67 @@
     "total_dashboards": [
         "CLOSER_BIACADEMY.pbix"
     ],
-    "total_groups": [],
-    "total_users": [
-        "Duarte Belo"
+    "total_groups": [
+        "Power BI RAG Workspace"
     ],
-    "total_tiles": {
-        "CLOSER_BIACADEMY.pbix": null
+    "total_users": [
+        "Duarte Belo",
+        "Rodrigo Anselmo"
+    ],
+    "pages": {
+        "US Sales Analysis": [
+            {
+                "name": "ReportSectiondecccb8482fa6cf4f797",
+                "displayName": "Regional Sales Analysis",
+                "order": 0
+            },
+            {
+                "name": "ReportSection98ceb79bc32f027d9868",
+                "displayName": "Page tooltip",
+                "order": 1
+            }
+        ],
+        "CLOSER_BIACADEMY": [
+            {
+                "name": "ad7629625350de3c2f92",
+                "displayName": "Customers",
+                "order": 0
+            },
+            {
+                "name": "2d7047f129c3f2484ff2",
+                "displayName": "Main Offices",
+                "order": 1
+            },
+            {
+                "name": "38741aa4f17a9ebc9995",
+                "displayName": "Product_Size_Weight_Color",
+                "order": 2
+            },
+            {
+                "name": "50c1abe0586dfc224c03",
+                "displayName": "Sales_quantity_amount_monthCategory",
+                "order": 3
+            },
+            {
+                "name": "e3e8edd15f80dbc7ad77",
+                "displayName": "Sales_quantity_country",
+                "order": 4
+            },
+            {
+                "name": "30e7910a0c74d5ed9130",
+                "displayName": "product_best_worst",
+                "order": 5
+            },
+            {
+                "name": "7c653908f5a8a0f72bb0",
+                "displayName": "Dashboard1",
+                "order": 6
+            },
+            {
+                "name": "b68cb1241c5ac12d55a6",
+                "displayName": "Dashboard2",
+                "order": 7
+            }
+        ]
     }
 }
