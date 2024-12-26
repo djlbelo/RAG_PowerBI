@@ -151,7 +151,7 @@ def main2():
         for report_id in info['total_reports'].values():
             #get report with access token in the future
             report = Report(group_id=GROUP_ID, report_id=report_id)
-
+            report
             #on function to render & load report
             report.on('loaded', loaded_callback)
             report.on('rendered', rendered_callback)
