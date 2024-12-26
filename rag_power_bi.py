@@ -98,15 +98,6 @@ def get_pages(groupId,report_id):
         print(f'Error retrieving pages: {response}')
     return response.json()
 
-def get_embed_token(groupId, report_id):
-    response = requests.post(f'{POWER_BI_API_URL}/groups/{groupId}/reports/{report_id}/GenerateToken', headers=headers)
-    if response.status_code == 200:
-        with open(f'responses/embed_token_{report_id}.json', 'w') as f:
-            f.write(json.dumps(response.json(), indent=4))
-    else:
-        print(f'Error retrieving embed token: {response}')
-    return response.json()
-
 # Retrieve dataflow sources
 # Summarize information
 def summarize_info():
@@ -138,7 +129,7 @@ def main1():
             f.write(json.dumps(summarize_info(), indent=4))
 
 
-def get_active_page(report):
+def get_active_page(report: Report):
     pages = report.get_pages()
     active_page = {}
     for page in pages:
@@ -147,16 +138,24 @@ def get_active_page(report):
             break
         return active_page
 
+def loaded_callback(event_details):
+    print('Report is loaded')
+
+def rendered_callback(event_details):
+    print('Report is rendered')
+
 
 def main2():
     if access_token:
         info = summarize_info()
-        reports = []
-        for report in info['total_reports'].values():
-            reports.append(Report(report_id=report))
+        for report_id in info['total_reports'].values():
+            #get report with access token in the future
+            report = Report(group_id=GROUP_ID, report_id=report_id)
 
-        print(reports)
-        for report in reports:
+            #on function to render & load report
+            report.on('loaded', loaded_callback)
+            report.on('rendered', rendered_callback)
+
             active_page = get_active_page(report)
             active_page_name = active_page['name']
             visuals = report.visuals_on_page(active_page_name)
