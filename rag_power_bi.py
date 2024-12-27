@@ -109,6 +109,8 @@ def summarize_info():
 
     summary = {
         'total_datasets': [dataset['name'] for dataset in datasets['value']] if datasets and 'value' in datasets else [],
+
+        #to-do change key - id / value - info
         'total_reports': {report['name']: report['id'] for report in reports['value']} if reports and 'value' in reports else {},
         'total_dashboards': [dashboard['displayName'] for dashboard in dashboards['value']] if dashboards and 'value' in dashboards else [],
         'total_groups': [group['name'] for group in groups['value']] if groups and 'value' in groups else [],
@@ -151,7 +153,7 @@ def main2():
         for report_id in info['total_reports'].values():
             #get report with access token in the future
             report = Report(group_id=GROUP_ID, report_id=report_id)
-            report
+            print(report)
             #on function to render & load report
             report.on('loaded', loaded_callback)
             report.on('rendered', rendered_callback)
