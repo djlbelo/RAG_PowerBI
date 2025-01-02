@@ -1,24 +1,13 @@
 import json
-
 import pandas as pd
 import requests
 import msal
 import papermill as pm
 from io import StringIO
-from powerbiclient import Report, QuickVisualize, models
+from powerbiclient import Report, models
 from powerbiclient.authentication import DeviceCodeLoginAuthentication
 
-AUTHORITY_URL = f'https://login.microsoftonline.com/organizations'
-CLIENT_ID = '04bb970d-3099-4845-b81d-92e23362f261'
-SCOPE = ["https://api.fabric.microsoft.com/Dataset.ReadWrite.All",
-    "https://api.fabric.microsoft.com/Dashboard.ReadWrite.All",
-    "https://api.fabric.microsoft.com/Item.ReadWrite.All",
-    "https://api.fabric.microsoft.com/Workspace.ReadWrite.All",
-    "https://api.fabric.microsoft.com/Report.ReadWrite.All",
-    "https://api.fabric.microsoft.com/Content.Create"]
-
-GROUP_ID = 'ceb0d1d0-6226-4aef-b245-fac7f89bb52e'
-POWER_BI_API_URL = f'https://api.powerbi.com/v1.0/myorg/'
+from credentials import AUTHORITY_URL, CLIENT_ID, SCOPE, GROUP_ID, POWER_BI_API_URL, TENANT_ID
 
 # Variables
 access_token = ''
@@ -30,11 +19,20 @@ if not access_token:
         authority=AUTHORITY_URL
     )
     result = app.acquire_token_interactive(scopes=SCOPE)
-    print(result)
     if 'access_token' in result:
         access_token = result['access_token']
+        print('Access token obtained successfully by interactive login')
     else:
-        print(f'Error obtaining access token: {result}')
+        print(f'Error obtaining access token: {result}, trying username and password')
+        app = msal.PublicClientApplication(CLIENT_ID, authority=TENANT_ID)
+        username = input('Enter username: ')
+        password = input('Enter password: ')
+        result = app.acquire_token_by_username_password(username, password, SCOPE)
+        if 'access_token' in result:
+            access_token = result['access_token']
+            print('Access token obtained successfully by username and password')
+        else:
+            print(f'Error obtaining access token: {result}')
 
 # Headers
 headers = {'Authorization': f'Bearer {access_token}'}
@@ -120,31 +118,43 @@ def embed_report(report):
         print('Report is rendered')
 
     report.on('rendered', rendered_callback)
-    #report._embedded = True
+    report._embedded = True
 
 # Summarize information
 def summarize_info():
-    datasets = get_datasets()
+    # datasets = get_datasets()
+    # dashboards = get_dashboards(GROUP_ID)
+    # groups = get_groups()
+    # users = get_users(GROUP_ID)
     reports = get_reports(GROUP_ID)
-    dashboards = get_dashboards(GROUP_ID)
-    groups = get_groups()
-    users = get_users(GROUP_ID)
 
-    summary = {
-        'total_datasets': [dataset['name'] for dataset in
-                           datasets['value']] if datasets and 'value' in datasets else [],
+    summary = {}
+    for report in reports['value']:
+        summary[report['id']] = {
+            'name': report['name'],
+            'pages': get_pages(GROUP_ID, report['id'])['value'],
+            'embed_token': get_embed_token(GROUP_ID, report['id']),
+            'embed_url': report['embedUrl'],
+            'dataset_id': report['datasetId'],
+            'csv_files': []
+        }
 
-        # to-do change key - id / value - info
-        'total_reports': {report['name']: report['id'] for report in
-                          reports['value']} if reports and 'value' in reports else {},
-        'total_dashboards': [dashboard['displayName'] for dashboard in
-                             dashboards['value']] if dashboards and 'value' in dashboards else [],
-        'total_groups': [group['name'] for group in groups['value']] if groups and 'value' in groups else [],
-        'total_users': [user['displayName'] for user in users['value']] if users and 'value' in users else [],
-        # in 'pages' put a list of pages for each report
-        'pages': {report['name']: get_pages(GROUP_ID, report['id'])["value"] for report in
-                  reports['value']} if reports and 'value' in reports else {}
-    }
+    # summary = {
+    #     'total_datasets': [dataset['name'] for dataset in
+    #                        datasets['value']] if datasets and 'value' in datasets else [],
+    #
+    #     # to-do change key - id / value - info
+    #     'total_reports': {report['name']: report['id']} for report in
+    #                       reports['value']} if reports and 'value' in reports else {},
+    #     'total_dashboards': [dashboard['displayName'] for dashboard in
+    #                          dashboards['value']] if dashboards and 'value' in dashboards else [],
+    #     'total_groups': [group['name'] for group in groups['value']] if groups and 'value' in groups else [],
+    #     'total_users': [user['displayName'] for user in users['value']] if users and 'value' in users else [],
+    #     # in 'pages' put a list of pages for each report
+    #     'pages': {report['name']: get_pages(GROUP_ID, report['id'])["value"] for report in
+    #               reports['value']} if reports and 'value' in reports else {}
+    # }
+
     with open('responses/summary.json', 'w') as f:
         f.write(json.dumps(summary, indent=4))
     return summary
@@ -172,6 +182,7 @@ def summarize_vis_info(report, pages):
                     df.to_csv(csv_file_path, index=False)
                     print(
                         f"Data for visual '{visual["title"].replace(" ", "")}' of type '{visual['type']}' exported successfully.")
+                    return csv_file_path
                 except Exception as e:
                     print(
                         f"Could not export data for visual '{visual["title"].replace(" ", "")}' of type '{visual['type']}': {e}")
@@ -179,23 +190,22 @@ def summarize_vis_info(report, pages):
 
 def main2():
     if access_token:
-        auth = DeviceCodeLoginAuthentication()
         info = summarize_info()
-        reports = get_reports(GROUP_ID)
-        for report_id in info['total_reports'].values():
+        for report_id in info.keys():
+            print(f'Processing report: {info[report_id]["name"]}')
             #Get report and create Report class
-            report = Report(group_id=GROUP_ID, report_id=report_id, auth=auth)
+            report = Report(group_id=GROUP_ID, report_id=report_id, auth=access_token)
 
             #Load, render and embed report
-            report._set_embed_config(access_token=get_embed_token(GROUP_ID, report_id),
-                                     embed_url=next(report['embedUrl'] for report in reports['value'] if report['id'] == report_id),
+            report._set_embed_config(access_token=info[report_id]['embed_token'],
+                                     embed_url=info[report_id]['embed_url'],
                                      view_mode=1,
                                      permissions=models.Permissions.ALL.value,
-                                     dataset_id=next(report['datasetId'] for report in reports['value'] if report['id'] == report_id))
+                                     dataset_id=info[report_id]['dataset_id'])
             embed_report(report)
 
             #Get visuals for all pages
-            summarize_vis_info(report, report.get_pages())
+            #info[report_id]['csv_files'].append(summarize_vis_info(report, report.get_pages()))
 
 def main():
     if access_token:
@@ -210,5 +220,5 @@ def main():
             )
 
 if __name__ == '__main__':
-    main()
+    main2()
 
