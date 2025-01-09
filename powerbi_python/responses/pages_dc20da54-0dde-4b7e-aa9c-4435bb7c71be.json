@@ -1,0 +1,15 @@
+{
+    "@odata.context": "https://wabi-north-europe-redirect.analysis.windows.net/v1.0/myorg/groups/ceb0d1d0-6226-4aef-b245-fac7f89bb52e/$metadata#pages",
+    "value": [
+        {
+            "name": "ReportSectiondecccb8482fa6cf4f797",
+            "displayName": "Regional Sales Analysis",
+            "order": 0
+        },
+        {
+            "name": "ReportSection98ceb79bc32f027d9868",
+            "displayName": "Page tooltip",
+            "order": 1
+        }
+    ]
+}

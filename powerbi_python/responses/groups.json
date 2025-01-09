@@ -1,0 +1,15 @@
+{
+    "@odata.context": "https://wabi-north-europe-redirect.analysis.windows.net/v1.0/myorg/$metadata#groups",
+    "@odata.count": 1,
+    "value": [
+        {
+            "id": "ceb0d1d0-6226-4aef-b245-fac7f89bb52e",
+            "isReadOnly": false,
+            "isOnDedicatedCapacity": true,
+            "capacityId": "056E42EB-62D8-4374-B811-FD63DC381010",
+            "defaultDatasetStorageFormat": "Small",
+            "type": "Workspace",
+            "name": "Power BI RAG Workspace"
+        }
+    ]
+}

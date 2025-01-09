@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d016b6d-34e0-4979-b6e0-27160f694e67" name="Changes" comment="file changes, added java module &amp; sleeps in .ipynb" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="package.json" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;djlbelo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/djlbelo/RAG_PowerBI.git&quot;,
+    &quot;accountId&quot;: &quot;1064000e-e6e1-4d82-85af-4275f7635feb&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/powerbi_java/powerbi_java/node_modules/powerbi-client/dist/powerbi-client.d.ts" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2pw1BpWGlfUvERmqa2QUHzM1t3R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.powerbi_rag.js.executor&quot;: &quot;Run&quot;,
+    &quot;Python.powerbi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.powerbi2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.powerbi_localhost.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_power_bi.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;CSV-Groovy.csv.groovy&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;CSV-Groovy.csv.groovy&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.12.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.10.5&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DuarteBelo/OneDrive - Closer Consultoria Lda/Ambiente de Trabalho/10th Data Academy/RAG_PowerBI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/DuarteBelo/AppData/Roaming/JetBrains/PyCharm2024.2/node/versions/22.12.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2024.2.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DuarteBelo\OneDrive - Closer Consultoria Lda\Ambiente de Trabalho\10th Data Academy\RAG_PowerBI" />
+      <recent name="C:\Users\DuarteBelo\OneDrive - Closer Consultoria Lda\Ambiente de Trabalho\10th Data Academy\RAG_PowerBI\Operations" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DuarteBelo\OneDrive - Closer Consultoria Lda\Ambiente de Trabalho\10th Data Academy\RAG_PowerBI\powerbi_python\templates" />
+      <recent name="C:\Users\DuarteBelo\OneDrive - Closer Consultoria Lda\Ambiente de Trabalho\10th Data Academy\RAG_PowerBI\powerbi_python" />
+      <recent name="C:\Users\DuarteBelo\OneDrive - Closer Consultoria Lda\Ambiente de Trabalho\10th Data Academy\RAG_PowerBI\powerbi_java" />
+      <recent name="C:\Users\DuarteBelo\OneDrive - Closer Consultoria Lda\Ambiente de Trabalho\10th Data Academy\RAG_PowerBI\responses" />
+      <recent name="C:\Users\DuarteBelo\OneDrive - Closer Consultoria Lda\Ambiente de Trabalho\10th Data Academy\RAG_PowerBI" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/powerbi_java/powerbi_java/app.js" working-dir="$PROJECT_DIR$/powerbi_java/powerbi_java">
+      <method v="2" />
+    </configuration>
+    <configuration name="powerbi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RAG_PowerBI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/powerbi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="powerbi2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RAG_PowerBI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/powerbi2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rag_power_bi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RAG_PowerBI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rag_power_bi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.powerbi" />
+        <item itemvalue="Node.js.app.js" />
+        <item itemvalue="Python.powerbi2" />
+        <item itemvalue="Python.rag_power_bi" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.24807.21" />
+        <option value="bundled-python-sdk-00717045f1d3-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.24807.21" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d016b6d-34e0-4979-b6e0-27160f694e67" name="Changes" comment="" />
+      <created>1733662190785</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733662190785</updated>
+      <workItem from="1733662191906" duration="19796000" />
+      <workItem from="1733734873730" duration="296000" />
+      <workItem from="1733761953392" duration="142000" />
+      <workItem from="1733821266246" duration="8787000" />
+      <workItem from="1733992274023" duration="3773000" />
+      <workItem from="1734609617615" duration="1793000" />
+      <workItem from="1734623421315" duration="1709000" />
+      <workItem from="1734710489541" duration="3951000" />
+      <workItem from="1734951247082" duration="11148000" />
+      <workItem from="1735207614217" duration="7804000" />
+      <workItem from="1735292298254" duration="10824000" />
+      <workItem from="1735553130131" duration="14429000" />
+      <workItem from="1735640994290" duration="2684000" />
+      <workItem from="1735812616429" duration="5421000" />
+      <workItem from="1735898289355" duration="2542000" />
+      <workItem from="1736177295747" duration="2910000" />
+      <workItem from="1736241646599" duration="8465000" />
+      <workItem from="1736266310481" duration="289000" />
+      <workItem from="1736266762157" duration="1150000" />
+      <workItem from="1736269189099" duration="390000" />
+      <workItem from="1736269617217" duration="612000" />
+      <workItem from="1736270371548" duration="10036000" />
+      <workItem from="1736414111225" duration="3903000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1733828695886</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733828695886</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1733828705966</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733828705966</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added powerbiclient lib funtions">
+      <option name="closed" value="true" />
+      <created>1734974170202</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734974170202</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added powerbiclient functions in .ipynb notebook">
+      <option name="closed" value="true" />
+      <created>1735212868880</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735212868880</updated>
+    </task>
+    <task id="LOCAL-00005" summary="notebook changes and csv exporting">
+      <option name="closed" value="true" />
+      <created>1735217270107</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735217270107</updated>
+    </task>
+    <task id="LOCAL-00006" summary="notebook changes and csv exporting">
+      <option name="closed" value="true" />
+      <created>1735310617690</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735310617690</updated>
+    </task>
+    <task id="LOCAL-00007" summary="notebook changes and csv exporting">
+      <option name="closed" value="true" />
+      <created>1735566799691</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735566799691</updated>
+    </task>
+    <task id="LOCAL-00008" summary="notebook changes and  exporting">
+      <option name="closed" value="true" />
+      <created>1735574739672</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735574739672</updated>
+    </task>
+    <task id="LOCAL-00009" summary=".py changes, AUTH and summarization by id">
+      <option name="closed" value="true" />
+      <created>1735816543470</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735816543470</updated>
+    </task>
+    <task id="LOCAL-00010" summary=".py changes, added localhost and .ipynb threads">
+      <option name="closed" value="true" />
+      <created>1735900256847</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1735900256847</updated>
+    </task>
+    <task id="LOCAL-00011" summary="file changes, added java module &amp; sleeps in .ipynb">
+      <option name="closed" value="true" />
+      <created>1736420948140</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1736420948140</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="added powerbiclient lib funtions" />
+    <MESSAGE value="added powerbiclient functions in .ipynb notebook" />
+    <MESSAGE value="notebook changes and csv exporting" />
+    <MESSAGE value="notebook changes and  exporting" />
+    <MESSAGE value=".py changes, AUTH and summarization by id" />
+    <MESSAGE value=".py changes, added localhost and .ipynb threads" />
+    <MESSAGE value="file changes, added java module &amp; sleeps in .ipynb" />
+    <option name="LAST_COMMIT_MESSAGE" value="file changes, added java module &amp; sleeps in .ipynb" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RAG_PowerBI$powerbi2.coverage" NAME="powerbi2 Coverage Results" MODIFIED="1735572801918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RAG_PowerBI$rag_power_bi.coverage" NAME="rag_power_bi Coverage Results" MODIFIED="1735292671164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RAG_PowerBI$powerbi_localhost.coverage" NAME="powerbi_localhost Coverage Results" MODIFIED="1736334123359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/powerbi_python" />
+    <SUITE FILE_PATH="coverage/RAG_PowerBI$powerbi.coverage" NAME="powerbi Coverage Results" MODIFIED="1736333758875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

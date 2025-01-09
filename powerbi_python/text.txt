@@ -1,0 +1,51 @@
+{
+    'model_name': 'ReportModel',
+    'model_module': 'powerbi-jupyter-client',
+    'model_module_version': '3.1.1',
+    'state': {
+        '_client_error': '',
+        '_dom_classes': (),
+        '_embed_config': {
+            'type': 'report',
+            'accessToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6InoxcnNZSEhKOS04bWdndDRIc1p1OEJLa0JQdyIsImtpZCI6InoxcnNZSEhKOS04bWdndDRIc1p1OEJLa0JQdyJ9.eyJhdWQiOiJodHRwczovL2FuYWx5c2lzLndpbmRvd3MubmV0L3Bvd2VyYmkvYXBpIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvMDU3ODY2Y2ItMGUwZi00ODE4LWJkNGEtMDI1NTg0NWRmMzU5LyIsImlhdCI6MTczNjE3ODY0NiwibmJmIjoxNzM2MTc4NjQ2LCJleHAiOjE3MzYxODM0NjEsImFjY3QiOjAsImFjciI6IjEiLCJhaW8iOiJBVlFBcS84WUFBQUFQR0RPb3Q0VVJPdzN5Y1RjSmp1dFNmNFN1UGVKZUNnVU1CeXFod2VaTXBCUkppZ1BQS3UvSXY0TVlXSEJCTFZmUU8xTU11S0JZVVdOYzRseFM2VFllSzR2QzBiRCtkNEtDSHNkZTJPaHFCUT0iLCJhbXIiOlsicHdkIiwicnNhIiwibWZhIl0sImFwcGlkIjoiMDRiYjk3MGQtMzA5OS00ODQ1LWI4MWQtOTJlMjMzNjJmMjYxIiwiYXBwaWRhY3IiOiIwIiwiZGV2aWNlaWQiOiI5YzFlMDA5Ny0yMGUzLTQ1M2EtODQ2Yi02MDZjM2MwZmI0NTEiLCJmYW1pbHlfbmFtZSI6IkFuc2VsbW8iLCJnaXZlbl9uYW1lIjoiUm9kcmlnbyIsImlkdHlwIjoidXNlciIsImlwYWRkciI6IjIwMDE6OGEwOjcwYWU6ODEwMDo5NDk6MzhmODo2YjM4OmFkNWYiLCJuYW1lIjoiUm9kcmlnbyBBbnNlbG1vIiwib2lkIjoiYzMyOTIxOTMtZWFhMC00MmY0LTljMDgtN2JmYjZkMzIzNzFlIiwicHVpZCI6IjEwMDMyMDAzQzgzMjJGRTEiLCJyaCI6IjEuQVY0QXkyWjRCUThPR0VpOVNnSlZoRjN6V1FrQUFBQUFBQUFBd0FBQUFBQUFBQUFSQWFwZUFBLiIsInNjcCI6IkNvbnRlbnQuQ3JlYXRlIERhc2hib2FyZC5SZWFkV3JpdGUuQWxsIERhdGFzZXQuUmVhZFdyaXRlLkFsbCBJdGVtLlJlYWRXcml0ZS5BbGwgUmVwb3J0LlJlYWRXcml0ZS5BbGwgV29ya3NwYWNlLlJlYWRXcml0ZS5BbGwiLCJzaWduaW5fc3RhdGUiOlsiZHZjX21uZ2QiLCJkdmNfY21wIiwia21zaSJdLCJzdWIiOiJuSzJXS1htU01YR3gzMTN3WW8tei1iVnhfNVd2bXJvTkp5SmhpOE5JYjhjIiwidGlkIjoiMDU3ODY2Y2ItMGUwZi00ODE4LWJkNGEtMDI1NTg0NWRmMzU5IiwidW5pcXVlX25hbWUiOiJyb2RyaWdvLmFuc2VsbW9AY2xvc2VyLnB0IiwidXBuIjoicm9kcmlnby5hbnNlbG1vQGNsb3Nlci5wdCIsInV0aSI6IkIzbXRJbUdhRFVlelNPRURqRGlJQUEiLCJ2ZXIiOiIxLjAiLCJ3aWRzIjpbImI3OWZiZjRkLTNlZjktNDY4OS04MTQzLTc2YjE5NGU4NTUwOSJdLCJ4bXNfaWRyZWwiOiIxIDEwIn0.habAfIaSyvAggCTPmTLro21QTZKZDJ8AQSSrQQn168TncDx_mnwZBJHhKVoQlVTtVhKVa7B5MXKHGnG5VgulyHeAerixIWvcQ1c8488zyy8gsPCtUdJ7lN8gSLflKLpDtOz8Fznc0IClBWRp0fWSYd0N2oONRTBJVqFhfpZI6BjTIm3sL4EyhlEpddXx-ct0sjgBWqJRHca5ZLzIzKsKnJcYEq6K5IVZx_sIO_ub1zi6ZX8inoIMZx2LgOMhZELQbzOBswlX36HEbMEw_MPY3Yq9Jx7GSVdTc47GtEpzq-7seXqtLw0BTbXHl2QhNJJtVWx7L1IerF9rWWgFXyaROQ',
+            'embedUrl': 'https://app.powerbi.com/reportEmbed?reportId=dc20da54-0dde-4b7e-aa9c-4435bb7c71be&groupId=ceb0d1d0-6226-4aef-b245-fac7f89bb52e&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsidXNhZ2VNZXRyaWNzVk5leHQiOnRydWV9fQ%3d%3d',
+            'tokenType': 0,
+            'viewMode': 0,
+            'permissions': None,
+            'datasetId': None
+        },
+        '_embedded': False,
+        '_event_data': {
+            'event_name': None,
+            'event_details': None
+        },
+        '_export_visual_data_request': {
+            'pageName': None,
+            'visualName': None,
+            'rows': None,
+            'exportDataType': None
+        },
+        '_get_bookmarks_request': False,
+        '_get_filters_request': False,
+        '_get_pages_request': False,
+        '_get_visuals_page_name': '',
+        '_report_bookmarks': [],
+        '_report_filters': [],
+        '_report_filters_request': {
+            'filters': [],
+            'request_completed': True
+        },
+        '_report_pages': [],
+        '_token_expired': False,
+        '_view_count': None,
+        '_view_module': 'powerbi-jupyter-client',
+        '_view_module_version': '3.1.1',
+        '_view_name': 'ReportView',
+        '_visual_data': '',
+        'container_height': 0.0,
+        'container_width': 0.0,
+        'layout': 'IPY_MODEL_6a2761df2fb345dcb5b214e76f8cf31d',
+        'tabbable': None,
+        'tooltip': None
+    }
+}
