@@ -1,10 +1,10 @@
 from io import StringIO
+import time
 import msal
 import pandas as pd
 import requests
 from powerbiclient import Report
 from flask import Flask, render_template
-
 # Use the correct scope for Power BI APIs
 SCOPE = ["https://analysis.windows.net/powerbi/api/.default"]
 # URL for your tenant
@@ -40,7 +40,7 @@ def generate_embed_token(access_token, group_id, report_id):
     """Generate an embed token for the Power BI report."""
     try:
         url = f"https://api.powerbi.com/v1.0/myorg/groups/{
-        group_id}/reports/{report_id}/GenerateToken"
+            group_id}/reports/{report_id}/GenerateToken"
         headers = {
             "Authorization": f"Bearer {access_token}",
             "Content-Type": "application/json"
@@ -56,21 +56,23 @@ def generate_embed_token(access_token, group_id, report_id):
             return embed_token
         else:
             print(f"Failed to generate embed token: {
-            response.status_code} {response.text}")
+                  response.status_code} {response.text}")
             return None
     except Exception as e:
         print(f"Error generating embed token: {e}")
         return None
 
+# , embed_url, embed_token
 
-def embed_report(report_id, group_id, embed_url, embed_token):
+
+def embed_report(report_id, group_id, embed_token):
     """Embed the Power BI report using the provided URL and token."""
     try:
         report = Report(
             report_id=report_id,
             group_id=group_id,
-            embed_url=embed_url,
-            embed_token=embed_token
+            # embed_url=embed_url,
+            auth=embed_token
         )
         print("Report embedded successfully.")
         return report
@@ -116,6 +118,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """Render the main page with the embedded report."""
+    print(render_template('index.html', iframe=EMBED_URL))
     return render_template('index.html', iframe=EMBED_URL)
 
 
@@ -139,22 +142,26 @@ if __name__ == "__main__":
         if embed_token:
             # Step 3: Embed the Report
             print(embed_token)
-            #
-            report = embed_report(REPORT_ID, GROUP_ID, EMBED_URL, embed_token)
-            # print(report._get_embed_state())
-            if report:
-                print("Power BI report embedding complete.")
-                # Call the summarize_vis_info function with the report object
-
+            # , EMBED_URL, embed_token
+            report = embed_report(REPORT_ID, GROUP_ID, access_token)
+            print(report._get_embed_state())
+            while report._get_embed_state()['state']['_embedded'] == False:
                 report.on(event="loaded",
                           callback=lambda: print("Report loaded"))
                 report.on(event='rendered',
                           callback=lambda: print("Report rendered"))
-
-                with app.app_context():
-                    summarize_vis_info(report)
-            else:
-                print("Failed to embed the report.")
+                report._embedded = True
+                print(report._get_embed_state())
+                time.sleep(1)
+                if report:
+                    print("Power BI report embedding complete.")
+                    print(report)
+                    #print(report.get_pages())
+                    # with app.app_context():
+                    #summarize_vis_info(report)
+                    print("aqui")
+                else:
+                    print("Failed to embed the report.")
         else:
             print("Embed token generation failed.")
     else:

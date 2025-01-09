@@ -1,0 +1,19 @@
+{
+  "name": "rag_powerbi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djlbelo/RAG_PowerBI.git"
+  },
+  "private": true,
+  "dependencies": {
+    "papaparse": "^5.4.1",
+    "powerbi-client": "^2.23.1",
+    "powerbi-models": "^1.15.2"
+  }
+}
