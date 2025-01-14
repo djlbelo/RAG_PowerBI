@@ -1,79 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Power BI Visual Interaction</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/powerbi-client/2.18.8/powerbi.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/papaparse/5.3.2/papaparse.min.js"></script> <!-- For CSV export -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Embed</title>
 </head>
 <body>
-    <div id="report-container" style="width: 100%; height: 450px;"></div>
-
-    <script>
-        // Embed configuration
-        const embedConfig = {
-            type: 'report',
-            tokenType: powerbi.models.TokenType.Embed,
-            accessToken: '<H4sIAAAAAAAEACXUx66DVgBF0X95UyIBpjpSBtR76b3OMMWATe9E-fe8KPM9WtI5f__Y2fUdsuLnz592oB8odlBYPWkCcNcHGJZl1Xi_zS9iRB9e2H4EOgv1t-FgxHGZVUT6SxQ4fQmas6JYdrfV7awqn5NYh2T1OwMUC7Fe2PRPwxA0HzkBMYRyTufuZEk7FROCLQ8C2Gh8j74nMzxYiJ9Qx-N-xfSFSIoqafYEU20IcgIb3rNH0BkmHqWD0KSuYCkipdM8MNUhyOz9RERy1nGFvchlWPsEj4dUY2G5XWgguuHeDYaRXN326LTeSfYbM7bAFasKK6tT1-BXXg5fhv57DjfZ1LwQoamhFxLMBdKGtbphY0c2ZH1DrDDEY5mvXxUwk5SphRC2Qfkk9k2NA2ZUT2qcsdD0zUZ5IJRHFQXyxEsU1Zal1y6UGp_ZLq6Sh7myxD4bavYCrb708a2FLv5ZX9X4AKKVtsgkWjnzak1n6kYS6UwxZYnqDjHHd9vF3aos4fDz7JiLcFd6La4W3Vjya9pTqiDU1uv7qGc2fqHxdcOavnb39mrH3PlLuulJLBTTCyxFtR9OE8AlioGWByNS4ipvzbchAAklG27UA9ppmILXO7Pg1EOIlf1LZbQ6PPnwaz7dKzLUTyaFkSy6KjYyWq5_YQF9vHC6aJ4M-FKE0u08YzszjU9Y1WsYcZBT5cVvfCJeVsR2ttt1jLUfj3pKNqKeWATZLb070sTyauGF00X28Ywgo-8Tyqy6xY_mE-ufuS8ML49RwVmCw6EbskuU4n5cS5E-HoJbq0h8xW98t-gKr_DvSrreZqoiOG-_o9SXumi6nKuAcj96oP388SPM17gOWnn9zkFAobp3LdoYy9eKJCu6RAaw_A1jYOOrzdyt5gyI0iRSwfgYWt1yTNf5DQvAufrhxKSyfvxKfpJWrc87fqu10ZXdlI5C-jJKmba0MuE8btrtsc_iDqEN6hTxLlVf0ZyCaOj97ZzNa5Z73RKLwQ93iw_Vyfgc6NkaT9wB2KRuIuuGqLvLxMG1tTLL0MELEridn_rHsxBONiQL9dOmKZgPmKjIfi5UvVQsD6b3K_NFfgi3b-AjgNxJq7hAEIVeOxd7Bxbao1fbUhfKwHIIX--wuB5YlfvoOnw-RgLArZgvw36NvxsbuyXilJmCSXxDoy9jN7TLPHpIhtwBwzR5xkhIHcrcX3_9x3yNdTkr4a-yQwmTmZfqBJ92CEjLLife-b_ymnefrdtc_mbflEjHXU_mF_NJzfZdqCjcTFLbYzLUSWr_dcjoC3FBQZ1bvnG9WmWI79EHXGY8b0rWpDzFDwIUeeQSFT9Rvh-a3ecSZ_bioH2DUCGQxSJNjUsY1OJ47iTfhwWDCbeKINwhfVtyN4bS0znd5_eVIEyckxRP2uRB2G_x9lL6JYmsuTA7ID4JeTVK7f2eoOSyHJqPq4yttyHP2TfDAI0cGXG0gRZ7Y0Cy1s4aRZl-TWj1qpuO9H2dNP-EW5FoSyAy9apJOyxybEXc0KcWkCcmbeOcmxeAdSpQtGFFjDvv1GYkgoVIYwmfp2CDc9YryhQWjkBBdlHl1YHXsiCTuamhfPnz-5f5n38BmEwYigIGAAA=.eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImV4cCI6MTczNTU3NzA3MiwiYWxsb3dBY2Nlc3NPdmVyUHVibGljSW50ZXJuZXQiOnRydWV9>',
-            embedUrl: '<https://app.powerbi.com/reportEmbed?reportId=dc20da54-0dde-4b7e-aa9c-4435bb7c71be&autoAuth=true&ctid=057866cb-0e0f-4818-bd4a-0255845df359>',
-            id: '<dc20da54-0dde-4b7e-aa9c-4435bb7c71be>',
-            settings: {
-                panes: {
-                    filters: { visible: false },
-                    pageNavigation: { visible: true }
-                }
-            }
-        };
-
-        // Embed the report
-        const container = document.getElementById('report-container');
-        const report = powerbi.embed(container, embedConfig);
-
-        // Define the script to extract and summarize visual data
-        async function summarizeVisInfo() {
-            const visualTypesToExport = [
-                'barChart', 'lineChart', 'pieChart', 'clusteredColumnChart',
-                'table', 'tableEx', 'map', 'slicer',
-                'lineClusteredColumnComboChart', 'shapeMap', 'decompositionTreeVisual', 'card'
-            ];
-
-            try {
-                const pages = await report.getPages();
-                for (const page of pages) {
-                    await page.setActive(); // Activate the page
-                    const visuals = await page.getVisuals();
-                    for (const visual of visuals) {
-                        if (visualTypesToExport.includes(visual.type)) {
-                            try {
-                                const exportData = await visual.exportData("summarized", 20);
-                                const csvData = exportData.data;
-                                console.log(csvData); // CSV content as a string
-
-                                // Optional: Save to file using PapaParse or other libraries
-                                Papa.parse(csvData, {
-                                    header: true,
-                                    complete: function(results) {
-                                        console.log("Parsed CSV:", results.data);
-                                        // Handle results here (e.g., save to server)
-                                    }
-                                });
-
-                                console.log(`Data for visual '${visual.title}' exported successfully.`);
-                            } catch (err) {
-                                console.error(`Failed to export data for visual '${visual.title}':`, err);
-                            }
-                        }
-                    }
-                }
-            } catch (error) {
-                console.error('Error interacting with the report:', error);
-            }
-        }
-
-        // Run the script after the report is loaded
-        report.on("loaded", function () {
-            console.log("Report loaded. Running script...");
-            summarizeVisInfo();
-        });
-    </script>
+    <div>
+        <div id="report-container" style="width: 1140px; height: 541.25px;"></div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+                crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/powerbi-client@2.19.0/dist/powerbi.min.js"></script>
+                <script src="./powerbi_rag.js"></script>
+                
+    </div>
 </body>
 </html>
