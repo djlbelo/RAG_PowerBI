@@ -1,17 +1,9 @@
-import json
-import pandas as pd
-import requests
-import msal
-from io import StringIO
-from powerbiclient import Report, models
-from powerbiclient.authentication import DeviceCodeLoginAuthentication
+import requests, json, msal
 
 from credentials import AUTHORITY_URL, CLIENT_ID, SCOPE, GROUP_ID, POWER_BI_API_URL, TENANT_ID
 
-# Variables
 access_token = ''
 
-# Authenticate and get access token
 if not access_token:
     app = msal.PublicClientApplication(
         CLIENT_ID,
@@ -21,10 +13,13 @@ if not access_token:
     if 'access_token' in result:
         access_token = result['access_token']
         print('Access token obtained successfully by interactive login')
-        print(access_token)
     else:
         print(f'Error obtaining access token: {result}, trying username and password')
-        app = msal.PublicClientApplication(CLIENT_ID, authority=TENANT_ID)
+
+        app = msal.PublicClientApplication(
+            CLIENT_ID,
+            authority=TENANT_ID
+        )
         username = input('Enter username: ')
         password = input('Enter password: ')
         result = app.acquire_token_by_username_password(username, password, SCOPE)
@@ -136,62 +131,8 @@ def summarize_info():
                 'csv_files': []
             }
 
-
     with open('responses/summary.json', 'w') as f:
         f.write(json.dumps(summary, indent=4))
     return summary
 
-
-def summarize_vis_info(report, pages):
-    # Define the types of visuals to export data for
-    visual_types_to_export = ['barChart', 'lineChart', 'pieChart', 'clusteredColumnChart', 'table', 'tableEx', 'map',
-                              'slicer', 'lineClusteredColumnComboChart', 'shapeMap', 'decompositionTreeVisual', 'card']
-
-    # Iterate over the visuals and export data for the specified types
-    for page in pages:
-        page_name = page['name']
-        report.set_active_page(page_name)
-        page_display_name = page['displayName']
-        visuals = report.visuals_on_page(page_name)
-        for visual in visuals:
-            if visual['type'] in visual_types_to_export:
-                try:
-                    summarized_exported_data = report.export_visual_data(page_name, visual['name'], rows=20)
-                    data = StringIO(summarized_exported_data)
-                    # Load data into pandas DataFrame
-                    df = pd.read_csv(data, sep=",")
-                    # Store the DataFrame as a CSV file in the 'csv' folder
-                    csv_file_path = f'csv/{visual["type"]}_{visual["title"].replace(" ", "_")}_{visual['name']}_{page_display_name.replace(" ", "_")}.csv'
-                    df.to_csv(csv_file_path, index=False)
-                    print(
-                        f"Data for visual '{visual["title"].replace(" ", "")}' of type '{visual['type']}' exported successfully.")
-                    return csv_file_path
-                except Exception as e:
-                    print(
-                        f"Could not export data for visual '{visual["title"].replace(" ", "")}' of type '{visual['type']}': {e}")
-        page['isActive'] = False
-
-def main2():
-    if access_token:
-        info = summarize_info()
-        for report_id in info.keys():
-            print(f'Processing report: {info[report_id]["name"]}')
-            #Get report and create Report class
-            report = Report(group_id=GROUP_ID, report_id=report_id, auth=access_token)
-
-            #Load, render and embed report
-
-            #run js code to get visuals
-
-            #Get visuals for all pages
-            info[report_id]['csv_files'].append(summarize_vis_info(report, report.get_pages()))
-
-def main():
-    if access_token:
-        info = summarize_info()
-        print(info)
-
-
-if __name__ == '__main__':
-    main()
-
+summarize_info()

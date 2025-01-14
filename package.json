@@ -14,6 +14,7 @@
   "dependencies": {
     "papaparse": "^5.4.1",
     "powerbi-client": "^2.23.1",
-    "powerbi-models": "^1.15.2"
+    "powerbi-models": "^1.15.2",
+    "powerbi-visuals-api": "^5.11.0"
   }
 }
