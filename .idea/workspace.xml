@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d016b6d-34e0-4979-b6e0-27160f694e67" name="Changes" comment="changed embedding to javascript, for adding visual exportation">
+    <list default="true" id="7d016b6d-34e0-4979-b6e0-27160f694e67" name="Changes" comment="javascript change in methods">
+      <change afterPath="$PROJECT_DIR$/powerbi_java/config/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerbi_java/credentials.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/powerbi_java/powerbi_metadata.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerbi_java/powerbi_rag.js" beforeDir="false" afterPath="$PROJECT_DIR$/powerbi_java/powerbi_rag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerbi_java/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/powerbi_java/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/powerbi_python/powerbi_metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/powerbi_python/powerbi_metadata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerbi_python/powerbi_rag.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/powerbi_python/powerbi_rag.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerbi_python/responses/embed_token_025bdeaf-cf4e-40b9-a4c6-01446cbdff3f.json" beforeDir="false" afterPath="$PROJECT_DIR$/powerbi_python/responses/embed_token_025bdeaf-cf4e-40b9-a4c6-01446cbdff3f.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/powerbi_python/responses/embed_token_dc20da54-0dde-4b7e-aa9c-4435bb7c71be.json" beforeDir="false" afterPath="$PROJECT_DIR$/powerbi_python/responses/embed_token_dc20da54-0dde-4b7e-aa9c-4435bb7c71be.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +24,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jupyter Notebook" />
-        <option value="JavaScript File" />
         <option value="package.json" />
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -248,7 +251,8 @@
       <workItem from="1736414111225" duration="10350000" />
       <workItem from="1736763390910" duration="4220000" />
       <workItem from="1736846241882" duration="15380000" />
-      <workItem from="1736937857381" duration="1089000" />
+      <workItem from="1736937857381" duration="6132000" />
+      <workItem from="1737019042439" duration="2149000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -354,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736869225447</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="javascript change in methods">
+      <option name="closed" value="true" />
+      <created>1736941198292</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1736941198292</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +394,8 @@
     <MESSAGE value="added js module &amp; time.sleep in jupyter" />
     <MESSAGE value="file changes, added java module &amp; sleeps in .ipynb" />
     <MESSAGE value="changed embedding to javascript, for adding visual exportation" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed embedding to javascript, for adding visual exportation" />
+    <MESSAGE value="javascript change in methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="javascript change in methods" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RAG_PowerBI$powerbi__1_.coverage" NAME="powerbi (1) Coverage Results" MODIFIED="1736765799456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/powerbi_python" />

@@ -105,16 +105,6 @@ def get_embed_token(groupId, report_id):
         print(f'Error retrieving embed token: {response}')
     return response.json()['token']
 
-def embed_report(report):
-    def loaded_callback(event_details):
-        print('Report is loaded')
-    report.on('loaded', loaded_callback)
-    def rendered_callback(event_details):
-        print('Report is rendered')
-
-    report.on('rendered', rendered_callback)
-    report._embedded = True
-
 # Summarize information
 def summarize_info():
     summary = {}
