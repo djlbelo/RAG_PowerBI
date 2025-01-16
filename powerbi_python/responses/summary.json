@@ -1,0 +1,72 @@
+{
+    "ceb0d1d0-6226-4aef-b245-fac7f89bb52e": {
+        "dc20da54-0dde-4b7e-aa9c-4435bb7c71be": {
+            "name": "US Sales Analysis",
+            "pages": [
+                {
+                    "name": "ReportSectiondecccb8482fa6cf4f797",
+                    "displayName": "Regional Sales Analysis",
+                    "order": 0
+                },
+                {
+                    "name": "ReportSection98ceb79bc32f027d9868",
+                    "displayName": "Page tooltip",
+                    "order": 1
+                }
+            ],
+            "embed_token": "H4sIAAAAAAAEAB2Uxa6EZgCF3-VuaYIP0KQL3N3-YYe7DDrQ9N172_23ODn294-T3sOcFj9__qwoTwfork8qSz7eZN0RPh8MOzuH0z0fm5y3C2Rl_jqxoP5sgwltnJHxNPMW83qxkSBiLwOFFN5mLLvkVktNPfQ0Us3UtDvbUhLoaWSIwOiR0kg7wcJC4uApgTXWWrVEiSi9PS94tQwadEA6EZlIK2eISle0z7IUaiJ0Sf95hEZ-o946kYMWUcmeweRE1gExL7r14DcdiDqHL_tVEjx-ZdfpvQaXdqZ3kn2WQHtzwM_atqrYuK7DD0fQZXEtB14wd-4DXby3xWctY_qo4yUpERyZ4uhL3yDq2yD5XpHZFDIVM02TKYrMrwANLyh200UZ54zi3zWykNCOQ6kZ1XPOzf03DU2V9V9Ogi-qMXJqGmM1cmVVednuTaildqfN2dwNY0YQQeBdMZEjZ8UeS-9hRU1p5ObeWr3nLd6j_ivPNm8jEIZF6n3F3Kx2meXc1J6yO7P1Eyx2Ppra3ZNVoo2Mrm3iKTeS3Z3LjdYRchajDOH3oSkJ3czmVT1-OpS1xMInU0YsNGednY15fYF71oTccL1mUlPlP28YaiDzVRwULkFotTwNTU6D9ZUGNSQNcw0kTI_NjrEtms45DPIlzahpczQw7wvtNNurl38I_MYaJO6dJ912m8z46tOrSU4yMaYqCQmyaATUEKZRo_ksRWjaJ7iZLy_S-kPiPU1pltVtG2G26iSWqtBytEqIKN_RwMFfgriM-4vIKz9NCPuyEDhMcMEBBzsn4O3S3oZ5ackpsuBxQpnF4kKXV3RZenr10X4UAvdNh58_fvj1XvZZL-_fOTxDQndTPIgiC-yHCpSZmkcTViBVnwokglTuclDxu5H2hyYYg6m8CynhcrX5yzoe7cyVPJjHvBmTlg0Do4IhNzzmZXdA0JrXkSBOY2hwhr-hbns-YzuymQGG1BxWz5ZI1ebci85dAaCIATatg9bGZVmQoTJpnnhFyoRmhFezF54wveSC8CLBFPU13bApIFt_rb39OjAhaSenk5-AJNBmyUI2v4QJlzJwy0PP-xYhZqJZuYV_XyXTkpzdwVFE9RwufK_DMn57eXWwQwWRp7RoXLDxvgfPAvJb30HCUznDepmbAXYpBdBEOFfPfNrKNXpvgRizc7A4q8GPLPIxDoqYFcv966__bL6XplzV6NdlnSAfnlViCp8brEkSsyELov6f8tt6SvdjLX-xAMqsyLBrcBvD7vqdx_QLL18HInxrJmEYW4Tw2Kswd7Pe42YESoR9mB32duZWuq44qdFA3Z1ICLgbjPbIxwbNBmYkFz5NgYpBefh6WdJDNdHS_B7Ra-qhNV1EufiU2IVIWcAY97sB9grFJCZyI-Dy2cxQQ10voZotwGqD5ciRC5zXelLhyUaNo2CAhXWWpAephtlILKWvInKayegaVHbOsbGlEUV3S8D9mb3VXxm6NHu6dCZqGBcXGj-uBkbsMm0Qt-KRwls2rU-55RxiomoIXirXhv7b7abcTE_v4NwW622bWydXLT4AaIEH-30mfc9ROq2gwDnflqRXAOlKSYdSo_4Xxj__AsT91yMCBgAA.eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImV4cCI6MTczNjk0Mjc3MCwiYWxsb3dBY2Nlc3NPdmVyUHVibGljSW50ZXJuZXQiOnRydWV9",
+            "embed_url": "https://app.powerbi.com/reportEmbed?reportId=dc20da54-0dde-4b7e-aa9c-4435bb7c71be&groupId=ceb0d1d0-6226-4aef-b245-fac7f89bb52e&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsidXNhZ2VNZXRyaWNzVk5leHQiOnRydWV9fQ%3d%3d",
+            "dataset_id": "4314c162-cd96-46f5-be4c-4e2ed9354b56",
+            "csv_files": []
+        },
+        "025bdeaf-cf4e-40b9-a4c6-01446cbdff3f": {
+            "name": "CLOSER_BIACADEMY",
+            "pages": [
+                {
+                    "name": "ad7629625350de3c2f92",
+                    "displayName": "Customers",
+                    "order": 0
+                },
+                {
+                    "name": "2d7047f129c3f2484ff2",
+                    "displayName": "Main Offices",
+                    "order": 1
+                },
+                {
+                    "name": "38741aa4f17a9ebc9995",
+                    "displayName": "Product_Size_Weight_Color",
+                    "order": 2
+                },
+                {
+                    "name": "50c1abe0586dfc224c03",
+                    "displayName": "Sales_quantity_amount_monthCategory",
+                    "order": 3
+                },
+                {
+                    "name": "e3e8edd15f80dbc7ad77",
+                    "displayName": "Sales_quantity_country",
+                    "order": 4
+                },
+                {
+                    "name": "30e7910a0c74d5ed9130",
+                    "displayName": "product_best_worst",
+                    "order": 5
+                },
+                {
+                    "name": "7c653908f5a8a0f72bb0",
+                    "displayName": "Dashboard1",
+                    "order": 6
+                },
+                {
+                    "name": "b68cb1241c5ac12d55a6",
+                    "displayName": "Dashboard2",
+                    "order": 7
+                }
+            ],
+            "embed_token": "H4sIAAAAAAAEAC2Utw6saBYG3-WmrIR3K02AbeDHe8jw3tMNzWjffXukySs5pfPV33_s7DsuWfnnv38oNpQCBYav3XNw_tzfyBtHv3P61kXmWUuBcDw7HBvpbXQxislGxR1VAAmKiqyVnVcCxeYKbsmQDlVECfZ5FrsHgz56-Rw2nyIfalTmk0RqF6HHlp5gmNZLy0drG0zeULiDbmuxqHPauJyi4uZkkr92TWpmrtCRJBN9NxvC2CPkkIKcM7ikcD4-XoDLmkAaOLCqS20UuO68-bBXS4edvZXPW0BDXo6LwyAAb-0AgPVcmClnrCVmoEqteL-kIRv4Ay_k-RecZQvpQeKqjqws8BZummD0uXg2LXza20Vzt5MvyxPO0knKwfJiTiz4oM39TlajAU-UqBPcqrtRG_OSRYpjPIFffZUqlO6vov0UGXNWEmlhQY8icWPfJRCfPsdFxNFHd80L312Un5AqWePURmC0wZPjUBDLZYyzYix8BzO2BdJLvgOUH8SrO34y9aTAZ_4iQ00cO7NjNdeT_G5WsBNXNU8ml-QS9LpP4pOiESrFFQl8T0mIvUbP8EZ_vIkkxHaKsLft03bxKC5jpuuhzmJErqlbfvudjUH4xtpls9HwjsNBr1mNyMF8hIXMWw4ogsAk66Yo7g7PI74FTIwEoP6YZ1Rj-kCcpjRYvL80mIaPCkAXT-RlL4Plkjmk5rTu_HK4Y8LRcylgp32SmMuoj2LLbPupFygpeAPBXDRdaiRykXwoMN93uFPTh9WMmuQHkBW7n5JfJE_tU3LIgPVLyvBuY03poKYmkipb3eyiJNi0OO6hhvjk2NP8GS40vlu2YuE___kj7N_ff4Dq-5uDNihbqtVu-iA8yEV4BuA15thwnaaP2FHrB41IbKtJyBFmK7uAt-e04uqU3y5Fd5P5wEV2K87-dqV6HRxmE73GP-7VHeJq2G3Truk-6Zo2YHi9YdG592KO7YVNmhDqWJPuiWp7lm5RrHGrdfeVb0s15lskmjDCJcNMw_k27nIFbgmmytjto-_oZrvxRqAI_35JsdtQ1JDoRRX3BPPqYkS1RGpQZ-NKZIGloje9vfSYzdXS9880X8Q8GkYfb5ZUD5n6KOtNgAikOi65ekvA9rdmP-rFZg5Y500zGReU9a8g_YSKbHBjWJm8WfEHiKMeihHExxjA4aKGyen3g_H59lwvi-L--usfzd-1rXY1_FmOeLmdlBm2GNukoLrwKIP5l_K6Zs7O9179MKN7VjIu4rG8ZfOOneANL4t5Jr_70D6eSP5kyuy5YUIUxmMDoBS-yciVZsS-36_wYjBPzYOj8hLAk5pE9B5ZTGl-0chj4tHONHTh9BsRpVdBQMqz996w8Alf1KShPPIDuk0CteAmfNd4QJuS-9UXwwqxQpGYqDCaorhKdo19s7VZWPajgixDjtxCvDdFmSzIGA33l4_ljXsR4wjHnFJ4z4aMY8i00-yN-fF-RDne05KQN7Qym7_spc4vSmHPVAPe5KbrcSLUW5F3ExNbRpDm_AZ3G0jMMdr8bM83C-Bbc7Zfd00uyqrBqKcdRcc43Ig8KpI-EUNmYuhHCdBRxYyAmUnnp_l__wezcyyFAgYAAA==.eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImV4cCI6MTczNjk0Mjc3MCwiYWxsb3dBY2Nlc3NPdmVyUHVibGljSW50ZXJuZXQiOnRydWV9",
+            "embed_url": "https://app.powerbi.com/reportEmbed?reportId=025bdeaf-cf4e-40b9-a4c6-01446cbdff3f&groupId=ceb0d1d0-6226-4aef-b245-fac7f89bb52e&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsidXNhZ2VNZXRyaWNzVk5leHQiOnRydWV9fQ%3d%3d",
+            "dataset_id": "7a924e7a-7ab5-4cfb-8e43-df82647bfc20",
+            "csv_files": []
+        }
+    }
+}
